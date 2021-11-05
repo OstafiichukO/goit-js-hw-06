@@ -1,9 +1,13 @@
-const numberOfCategories = document.querySelectorAll('#categories>.item>h2');
-console.log(`Number of categories: ${numberOfCategories.length}`);
+const сategoriesEl = document.querySelectorAll("ul#categories .item");
+console.log(`Number of categories: ${сategoriesEl.length}`);
 
-const categories = document.querySelectorAll('#categories>.item>h2');
-console.log(categories);
-
+const items = document.querySelectorAll("ul#categories .item");
+Array.prototype.forEach.call(items, (element) => {
+  const title = element.querySelector("h2").innerHTML;
+  const itemsLength = element.querySelectorAll("li").length;
+  console.log(`Category: ${title}
+  Element: ${itemsLength}`);
+});
 // Напиши скрипт который:
 
 // Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item.
