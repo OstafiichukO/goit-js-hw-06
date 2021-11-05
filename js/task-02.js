@@ -7,8 +7,16 @@ const ingredients = [
   "Condiments",
 ];
 
-const elementLi = document.createElement("li");
-elementLi.textContent = 
+// const elementLi = document.createElement("li");
+// elementLi.textContent =
+const placeToPutLinks = document.getElementById("ingredients");
+
+for (let i = 0; i < ingredients.length; i++) {
+  const anchorTag = document.createElement("li");
+  const hrefValue = arrayOfLinks[i];
+  anchorTag.href = hrefValue;
+  placeToPutLinks.appendChild(anchorTag);
+}
 
 // Напиши скрипт, который для каждого элемента массива ingredients:
 
