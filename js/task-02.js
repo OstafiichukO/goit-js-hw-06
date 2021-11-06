@@ -7,27 +7,12 @@ const ingredients = [
   "Condiments",
 ];
 
-// const elementLi = document.createElement("li");
-// elementLi.textContent =
-const placeToPutLinks = document.getElementById("ingredients");
-
-for (let i = 0; i < ingredients.length; i++) {
-  const anchorTag = document.createElement("li");
-  const hrefValue = arrayOfLinks[i];
-  anchorTag.href = hrefValue;
-  placeToPutLinks.appendChild(anchorTag);
+const arrayLength = ingredients.length;
+var temp;
+for (let i = 0; i < arrayLength; i++) {
+  temp = document.createElement("li");
+  temp.className = "item";
+  temp.innerHTML = ingredients[i];
+  document.getElementsByTagName("ul")[0].appendChild(temp);
 }
-
-// Напиши скрипт, который для каждого элемента массива ingredients:
-
-// Создаст отдельный элемент <li>. Обзательно используй метод document.createElement().
-// Добавит название ингредиента как его текстовое содержимое.
-// Добавит элементу класс item.
-// После чего вставит все <li> за одну операцию в список ul.ingredients.
-
-/* <li class="item">Potatoes</li>
-<li class="item">Mushrooms</li>
-<li class="item">Garlic</li>
-<li class="item">Tomatos</li>
-<li class="item">Herbs</li>
-<li class="item">Condiments</li> */
+console.log(temp);
