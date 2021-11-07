@@ -8,11 +8,10 @@ const ingredients = [
 ];
 
 const arrayLength = ingredients.length;
-var temp;
+let liEl;
 for (let i = 0; i < arrayLength; i++) {
-  temp = document.createElement("li");
-  temp.className = "item";
-  temp.innerHTML = ingredients[i];
-  document.getElementsByTagName("ul")[0].appendChild(temp);
+  liEl = document.createElement("li");
+  liEl.className = "item";
+  liEl.innerHTML = ingredients[i];
+  document.getElementsByTagName("ul")[0].appendChild(liEl);
 }
-console.log(temp);
