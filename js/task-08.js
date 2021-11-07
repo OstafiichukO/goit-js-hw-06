@@ -1,7 +1,8 @@
-const buttonEl = document.querySelector('button');
+const formEl = document.querySelector('.login-form');
 
 function message(event) {
   event.preventDefault();
 }
 
-buttonEl.addEventListener('submit', message);
+
+formEl.addEventListener('submit', formResult);
