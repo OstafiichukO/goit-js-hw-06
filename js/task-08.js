@@ -3,19 +3,28 @@ const email = document.querySelector('input[name=email]')
 const pass = document.querySelector('input[name=password]')
 const btn = document.querySelector('button[type=submit]')
 
-const response = {}
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const [email, password] = event.target.elements;
   if(document.querySelector('input[name=email]').value.length == 0 || document.querySelector('input[name=password]').value.length == 0) {
     alert("Заполните все поля формы!")
+    return;
   }
-  console.log("email :", email.value)
-  console.log("password :", password.value)
+  const result = `email : ${email.value}
+  password : ${password.value}`
+  console.log(result)
 
-  // const formData = new FormData(event.target)
-  // formData.forEach((password, email) => {
-  //   console.log(`${email} : ${password}`)
+  // console.log("email :", email.value)
+  // console.log("password :", password.value)
+  // const formData = new FormData(event.currentTarget);
+  // const formInfo = {}
+  // formData.forEach((value, name) => {
+  //   if (value == '') {
+  //     alert("Заполните все поля формы!")
+  //   } else {
+  //     formInfo[name] = value
+  //   }
+  //   console.log(formInfo)
   // })
   form.reset();
 });
